@@ -1,0 +1,5 @@
+from sys
+
+header = "MOF,UNIT,TEMP,PRESSURE,UPTAKE,MARGIN,WARNINGS,NOTES"
+output = sys.argv[1]
+
