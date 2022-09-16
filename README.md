@@ -22,6 +22,9 @@ The "Other" directory has the scripts for removing charges from cif files (neces
 
 
 
+
+
+
 For gathering geomteric features:
 
 (1) Install Zeo++
