@@ -1,6 +1,8 @@
 # ClusterAutomation
-Scripts Used For Cluster Automation, Including Forcefields and Scripts for Modifying CIFs (removing charges, translating along axes etc.)
+Repo includes scripts used for cluster automation, including forcefields and scripts for modifying CIFs (removing charges, translating along axes etc.)
 
+
+For RASPA simulation automation, use the RASPA_Automation direcoty in this repo and follow the steps below:
 
 (1) Move the forcefield file to the RASPA forcefields directory.
 
@@ -13,3 +15,7 @@ Scripts Used For Cluster Automation, Including Forcefields and Scripts for Modif
 (5) Update the simulation templates (in the templates direcotry), and specify which one to use in the settings.py document.
 
 (6) bash Run.sh while in the RASPA_Automation directory
+
+
+
+The "Other" directory has the scripts for removing charges from cif files (necessary for zeo++ simulations), automation scripts used in Zeo++, shifting mofs such that atoms have squared sums closes to axes, etc. 
