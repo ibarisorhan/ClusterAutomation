@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -P ${CLUSTER_PROJECT_MAIN}
+#PBS -q normal
+#PBS -l ncpus=1
+#PBS -l mem=16gb
+#PBS -l walltime=24:00:00
+#PBS -N GeometryLoop
+#PBS -j oe
+cd  $PBS_O_WORKDIR
+
+bash geometry_loop.sh
