@@ -6,6 +6,6 @@ for cif in *.cif; do
 	./network -res ${cif%.cif}_output.res ${cif}
 done
 
-cat *.res > final_results_table.txt
+cat *.res > OUTPUT_res.txt
 cat *.sa > OUTPUT_sa.txt
 cat *.volpo > OUTPUT_volpo.txt
