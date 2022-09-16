@@ -4,7 +4,7 @@ Repo includes scripts used for cluster automation, including forcefields and scr
 
 For RASPA simulation automation, use the RASPA_Automation direcoty in this repo and follow the steps below:
 
-(1) Move the forcefield file to the RASPA forcefields directory.
+(1) Move the forcefield file (in ./Extras/Automation_Script/)to the RASPA forcefields directory.
 
 (2) In the PBS template the HOME directry and project name should be entered.
 
