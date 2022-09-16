@@ -19,3 +19,14 @@ For RASPA simulation automation, use the RASPA_Automation direcoty in this repo 
 
 
 The "Other" directory has the scripts for removing charges from cif files (necessary for zeo++ simulations), automation scripts used in Zeo++, shifting mofs such that atoms have squared sums closes to axes, etc. 
+
+
+
+For gathering geomteric features:
+
+(1) Install Zeo++
+(2) Create a new directory with cif files that will be analysed
+(3) If applicable, remove charges from cifs
+(4) Copy network binary from zeo++ to the new directory
+(5)Change the PBS file's project name
+(6) qsub PBS.txt to run
