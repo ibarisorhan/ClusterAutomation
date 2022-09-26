@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -P dk3
+#PBS -P {PROJECT_TITLE}
 #PBS -q express
 #PBS -l ncpus=1
 #PBS -l mem=16gb
@@ -8,8 +8,6 @@
 #PBS -o AUTOMATION_SCRIPT.out
 #PBS -e AUTOMATION_SCRIPT.err
 cd $PBS_O_WORKDIR
-HOME="/scratch/dk3/io3179/"
-RASPA_DIR="/scratch/dk3/io3179/RASPA/simulations/"
 
 bash Run.sh
 
