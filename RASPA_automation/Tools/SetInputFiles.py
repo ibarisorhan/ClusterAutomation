@@ -43,7 +43,7 @@ def multiply_unit_cell(cif_address, cutoff):
     data = f.read()
     f.close()
     a_len, b_len, c_len  = '_cell_length_a', '_cell_length_b', '_cell_length_c'
-    aa, ab, ac = '_cell_angle_alpha', '_cell_angle_alpha', '_cell_angle_alpha'
+    aa, ab, ac = '_cell_angle_alpha', '_cell_angle_beta', '_cell_angle_gamma'
     lines = data.split('\n')
     a,b,c =0,0,0
     alpha ,beta, gamma = 0,0,0
