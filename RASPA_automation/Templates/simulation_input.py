@@ -1,28 +1,36 @@
 #----------------- TEMPLATE -----------------
 data  = {"file_name" : "simulation_{job_number}.input"}
 
-simulation = {"MonteCarlo": """
-SimulationType                MonteCarlo
+simulation = {
 
+"MonteCarlo":"""
+SimulationType        MonteCarlo
+NumberOfCycles        50000
+PrintEvery            1000
+RestartFile           no
 
-NumberOfCycles                50000
-NumberOfInitializationCycles  0
-PrintEvery                    1000
-PrintPropertiesEvery          1000
+CutOff                12.5
 
-Forcefield                   {ForcefieldName}
-Framework 0
-            FrameworkName                  {MOF}
-            RemoveAtomNumberCodeFromLabel  yes
-            UnitCells                      {countABC}
-
-ExternalTemperature           {ExternalPressure}
+Forcefield                    {ForcefieldName}
+Framework                     0
+FrameworkName                 {MOF}
+UnitCells                     {countABC}
+ExternalTemperature           {ExternalTemperature}
+ExternalPressure              {ExternalPressure}
+AddAtomNumberCodeToLabel      yes
+UseChargesFromCIFFile         yes
 
 Component 0 MoleculeName             CO2
-            MoleculeDefinition        CO2
-            WidomProbability          1.0
-            CreateNumberOfMolecules   0
-        """,
+            MoleculeDefinition       CO2
+            TranslationProbability   0.5
+            RegrowProbability        0.5
+            RotationProbability      0.5
+            ReinsertionProbability   0.5
+            SwapProbability          1.0
+            CreateNumberOfMolecules  0
+
+
+""",
 
 
 
@@ -74,6 +82,29 @@ RotationProbability 0.5
 TranslationProbability 0.5
 ReinsertionProbability 0.5
 CreateNumberOfMolecules 1
+
+""",
+
+"Henry298K": """
+SimulationType                MonteCarlo
+NumberOfCycles                20000
+NumberOfInitializationCycles  0
+PrintEvery                    1000
+PrintPropertiesEvery          1000
+
+Forcefield                    AutomationScript
+
+Framework 0
+FrameworkName {MOF}
+RemoveAtomNumberCodeFromLabel no
+UnitCells {countABC}
+ExternalTemperature 298
+
+Component 0 MoleculeName             CO2
+            MoleculeDefinition       CO2
+            IdealGasRosenbluthWeight 1
+            WidomProbability         1.0
+            CreateNumberOfMolecules  0
 
 """
 }
