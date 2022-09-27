@@ -1,7 +1,7 @@
 # ClusterAutomation
 Repo includes scripts used for cluster automation, including forcefields and scripts for modifying CIFs (removing charges, translating along axes etc.)
-
-
+<br>
+<br>
 For RASPA simulation automation, use the RASPA_Automation directory in this repo and follow the steps below:
 <ol>
 <li>Move the forcefield file (in ./Extras/Automation_Script/)to the RASPA forcefields directory.</li>
@@ -13,13 +13,12 @@ For RASPA simulation automation, use the RASPA_Automation directory in this repo
 </ol>
 
 
+
+<br>
+<br>
 The "Other" directory has the scripts for removing charges from cif files (necessary for zeo++ simulations), automation scripts used in Zeo++, shifting mofs such that atoms have squared sums closes to axes, etc. 
-
-
-
-
 <br>
-<br>
+
 
 For gathering geomteric features:
 
