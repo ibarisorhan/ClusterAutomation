@@ -6,7 +6,7 @@ For RASPA simulation automation, use the RASPA_Automation direcoty in this repo 
 
 (1) Move the forcefield file (in ./Extras/Automation_Script/)to the RASPA forcefields directory.
 
-(2) In the PBS template the HOME directry and project name should be entered.
+(2) In the PBS template the HOME directry and project name MUST be entered.
 
 (3) In the settings.y the 'ABSOLUTE_PATH_TO_RASPA_DIR' must be changed.
 
