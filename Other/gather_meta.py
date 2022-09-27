@@ -4,7 +4,7 @@
 
 #Settings
 outputname = f'./meta_output.csv'
-loc = '/Users/barisorhan/Documents/FromLinux/MOF_Files/CO2_GithubDocs/40Pa1000Pa4000Pa/'
+loc = './System_0/'
 
 
 #MAIN
