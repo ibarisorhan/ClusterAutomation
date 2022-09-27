@@ -40,7 +40,7 @@ try:
             errors += i.split('\n')[0]
 
     f = open(output_doc, "a+")
-    f.write(f"{MOF},{Units},{Temp},{Press},{uptake_abs},{uptake_error},{hasError},{errors}\n")
+    f.write(f"{MOF},{Units},{Temp},{Press},{uptake_abs},{uptake_error},{hasError}\n")
     f.close()
     
     
