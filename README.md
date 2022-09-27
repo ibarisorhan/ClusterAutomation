@@ -21,15 +21,11 @@ The "Other" directory has the scripts for removing charges from cif files (neces
 
 
 For gathering geomteric features:
-
-(1) Install Zeo++
-
-(2) Create a new directory with cif files that will be analysed
-
-(3) If applicable, remove charges from cifs
-
-(4) Copy network binary from zeo++ to the new directory
-
-(5)Change the PBS file's project name
-
-(6) qsub PBS.txt to run
+<ol>
+<li> Install Zeo++</li>
+<li> Create a new directory with cif files that will be analysed</li>
+<li> If applicable, remove charges from cifs</li>
+<li> Copy network binary from zeo++ to the new directory</li>
+<li>Change the PBS file's project name</li>
+<li> qsub PBS.txt to run</li>
+</ol>
