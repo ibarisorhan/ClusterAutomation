@@ -10,9 +10,9 @@ For RASPA simulation automation, use the RASPA_Automation direcoty in this repo 
 
 (3) In the settings.y the 'ABSOLUTE_PATH_TO_RASPA_DIR' must be changed.
 
-(4) Move the cifs to the raspa/structures/cif/ directory, create a list of ones to simulate in the Structures.txt file
+(4) Move the cifs to the raspa/structures/cif/ directory, create a list of ones to simulate in the ./Queu/Structures.txt file
 
-(5) Update the simulation templates (in the templates direcotry), and specify which one to use in the settings.py document.
+(5) Update the simulation templates (in the templates directory), and specify which one to use in the settings.py document.
 
 (6) bash Run.sh while in the RASPA_Automation directory (Optional: From the "Other" folder, the PBS_1.txt task can be moved to the RASPA automation folder and sent to queue. This will recursively call itself to run Run.sh in the time frame in the script! Be sure to change the project title in the document if used)
 
