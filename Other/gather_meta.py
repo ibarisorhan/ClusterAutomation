@@ -3,8 +3,8 @@
 # CHANGE SETTINGS BELOW BEFORE RUNNING!
 
 #Settings
-outputname = f'./meta_output.csv'
-loc = './System_0/'
+outputname = r'C:\Users\s3700543\Desktop\meta_data.txt'
+loc = r'C:\Users\s3700543\Desktop\\'
 
 
 #MAIN
@@ -167,11 +167,22 @@ def gather_full(data,simtype=SIMULATION_NAME):
 
 def save_record_to_dfdict(current,df_dict_in):
     df_dict = copy.deepcopy(df_dict_in)
+    
+    for key in current.keys():
+        if key not in df_dict.keys():
+            length = 0
+            if len(df_dict.keys()) >0:
+                first_key = list(df_dict.keys())[0]
+                length = len(df_dict[first_key])
+            df_dict[key] = ["" for i in range(length)]
+    
     for key in df_dict.keys():
         if key not in current.keys():
             df_dict[key].append('')
         else:
             df_dict[key].append(current[key])
+
+        
     return df_dict
 
 
@@ -244,12 +255,6 @@ details_to_gather = {
 
 if __name__ == "__main__":
     outputs_collection = {}
-    for i in details_to_gather:
-        for j in details_to_gather[i]:
-            outputs_collection[f'{i} {remove_spaces(j)}'] = []
-
-
-
 
     data_files = [i for i in listdir(loc) if i[-5:]=='.data']
     for file in data_files:
@@ -263,7 +268,6 @@ if __name__ == "__main__":
 
 
     write_to_csv(outputs_collection)
-
 
 
 
