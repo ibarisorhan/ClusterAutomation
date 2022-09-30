@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-# CHANGE SETTINGS BELOW BEFORE RUNNING!
 
-#Settings
-outputname = './meta_data.csv'
-loc = './'
+# CHANGE VARIABLES BELOW BEFORE RUNNING!
+outputname = './meta_data.csv' #outputfile
+loc = './' #Directory in which RASPA outputs are found
 
 
 #MAIN
