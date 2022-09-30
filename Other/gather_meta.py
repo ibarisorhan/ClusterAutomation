@@ -3,8 +3,8 @@
 # CHANGE SETTINGS BELOW BEFORE RUNNING!
 
 #Settings
-outputname = r'C:\Users\s3700543\Desktop\meta_data.txt'
-loc = r'C:\Users\s3700543\Desktop\\'
+outputname = './meta_data.csv'
+loc = './'
 
 
 #MAIN
