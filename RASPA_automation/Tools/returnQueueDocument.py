@@ -4,6 +4,6 @@ if __name__ == '__main__':
     sys.path.append("../..")
     from RASPA_automation import Settings
     doc = Settings.Structures['ListOfStructures']
-    queue = doc.strip('.txt') + Settings.Structures['currentSuffix']  
+    queue = "./" + doc.strip('.txt') + Settings.Structures['currentSuffix']  
     sys.stdout.write(queue)
     sys.exit(0)
