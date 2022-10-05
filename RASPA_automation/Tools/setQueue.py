@@ -10,8 +10,8 @@ import RASPA_automation.Settings as Settings
 doc   = Settings.Structures['ListOfStructures']
 count = Settings.Structures['NumberOfJobs']
 
-current  = doc.strip('.txt') + Settings.Structures['currentSuffix']
-complete = doc.strip('.txt') + Settings.Structures['compeletedSuffix']
+current  = "./" + doc.strip('.txt') + Settings.Structures['currentSuffix']
+complete = "./" + doc.strip('.txt') + Settings.Structures['compeletedSuffix']
 
 
 f  = open(current,  'r+')
