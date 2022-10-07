@@ -2,7 +2,7 @@
 
 ABSOLUTE_PATH_TO_RASPA_DIR = ''
 PROJECT_NAME = '' 
-Sim = 'NVT'
+Sim = 'MonteCarlo'
 
 
 Settings = {
