@@ -28,7 +28,7 @@ while read -r line; do
 	#qsub $task
 done < $queueDoc
 
-python3 ./Tools/Consolidate_PBS.py 
+python3 ${SCRIPT_DIR}/Tools/Consolidate_PBS.py 
 
 for i in *.txt; do
 	if [ ${i:0:5} == "BATCH" ]; then
