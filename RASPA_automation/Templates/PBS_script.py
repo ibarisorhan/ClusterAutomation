@@ -1,6 +1,6 @@
 data  = {"file_name" : "PBS_{job_number}.txt",
 "text" : """#!/bin/bash
-#PBS -P PROJECT_NAME
+#PBS -P {PROJECT_NAME}
 #PBS -q normal
 #PBS -l ncpus=1
 #PBS -l mem=16gb
