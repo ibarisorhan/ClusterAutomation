@@ -1,6 +1,6 @@
 #The Settings Here Should Be Checked Before Simulations Are Run!
 
-
+ABSOLUTE_PATH_TO_RASPA_DIR = ''
 Sim = 'NVT'
 
 
@@ -14,7 +14,7 @@ Settings = {
 }
 
 PBS_Settings = {
-	'RASPA_Directory' : 'ABSOLUTE_PATH_TO_RASPA_DIR/RASPA/simulations/'
+	'RASPA_Directory' : f'{ABSOLUTE_PATH_TO_RASPA_DIR}/RASPA/simulations/'
 }
 
 Structures = {
