@@ -18,6 +18,7 @@ def FormatAndWriteTemplate(template, job_number  ):
     f= open(filename, 'w+')
        
     text = template.data['text'].format(
+    PROJECT_NAME = Settings.PROJECT_NAME,
     VDWCutoff = Settings.Settings['Cutoff'],
     SimulationType = Settings.Settings['SimulationType'],
     ForcefieldName = Settings.Settings['ForcefieldName'],
