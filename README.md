@@ -5,6 +5,7 @@ Repo includes scripts used for cluster automation, including forcefields and scr
 For RASPA simulation automation, use the RASPA_Automation directory in this repo and follow the steps below:
 <ol>
 <li>Move the forcefield file (in ./Extras/Automation_Script/)to the RASPA forcefields directory.</li>
+<li> Create a CO2 molecule definition in the RASPA installation, or change the template used </li>
 <li>In the PBS template the HOME directry and project name MUST be entered.</li>
 <li>In the settings.y the 'ABSOLUTE_PATH_TO_RASPA_DIR' must be changed.</li>
 <li>Move the cifs to the raspa/structures/cif/ directory, create a list of ones to simulate in the ./Queu/Structures.txt file.</li>
