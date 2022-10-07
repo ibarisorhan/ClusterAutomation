@@ -24,9 +24,18 @@ while read -r line; do
 	python3 ${SCRIPT_DIR}/Tools/SetInputFiles.py $cif $JobCount
 	task="PBS_${JobCount}.txt"
         JobCount=$((JobCount + 1))
-	echo $task
-	qsub $task
+	#echo $task
+	#qsub $task
 done < $queueDoc
+
+python3 ./Tools/Consolidate_PBS.py 
+
+for i in *.txt; do
+	if [ ${i:0:5} == "BATCH" ]; then
+		echo $i
+		qsub $i
+	fi
+done
 
 #python3 ${SCRIPT_DIR}/Tools/SetQsub.py
 
