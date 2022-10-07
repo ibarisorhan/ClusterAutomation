@@ -51,6 +51,12 @@ def add_to_batch(batch,pbs):
         file.write(new_line)
     return None
 
+def add_line(doc,line):
+    with open(doc,'a') as f:
+        f.write('\n')
+        f.write(line)
+        f.write('\n')
+    return None
 
 if __name__ == "__main__":
     directory = './'
@@ -62,4 +68,6 @@ if __name__ == "__main__":
         for i in PBS_scripts[:48]:
             add_to_batch(name, i)
             os.remove(i)
+        add_line(name,'wait')
+
         PBS_scripts = [directory + i for i in listdir(directory) if i[:3] == "PBS"]
