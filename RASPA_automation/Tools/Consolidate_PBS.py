@@ -1,10 +1,15 @@
+import sys
 import os 
 from os import listdir
+
+sys.path.append("../")
+sys.path.append('../../')
+import RASPA_automation.Settings as Settings
 
 
 template = {"file_name" : "BATCH_{batch_number}.txt",
 "text" : """#!/bin/bash
-#PBS -P PROJECT_NAME
+#PBS -P {PROJECT_NAME}
 #PBS -q normal
 #PBS -l ncpus=48
 #PBS -l mem=16gb
@@ -23,31 +28,31 @@ def create_batch_pbs(template, batch_number):
     """
     name = template['file_name'].format(batch_number = batch_number)
     with open(name, 'w+') as task:
-        task.write(template['text'].format(batch_number = batch_number))
+        task.write(template['text'].format(batch_number = batch_number, PROJECT_NAME = Settings.PROJECT_NAME))
     return name
-  
-  
-  def get_final_2lines(pbs_doc):
+
+
+
+def get_final_2lines(pbs_doc):
     f=open(pbs_doc,'r')
     data=f.read()
     f.close()
     
     lines = [i for i in data.split('\n') if i.strip() != ""]
     return lines[-2:]
-  
-  
-  def add_to_batch(batch,pbs):
+
+
+
+def add_to_batch(batch,pbs):
     last2 = get_final_2lines(pbs)
     new_line = '\n' + last2[0]
-    new_line += '\n' + last2[1] + '&\n'
+    new_line += '\n' + last2[1] + ' &\n'
     with open(batch,'a') as file:
         file.write(new_line)
     return None
-  
-  
-  
-  
-  if __name__ == "__main__":
+
+
+if __name__ == "__main__":
     directory = './'
     PBS_scripts = [directory + i for i in listdir(directory) if i[:3] == "PBS"]
     batch_number = 0
@@ -55,7 +60,6 @@ def create_batch_pbs(template, batch_number):
         name = create_batch_pbs(template, batch_number)
         batch_number += 1
         for i in PBS_scripts[:48]:
+            add_to_batch(name, i)
             os.remove(i)
         PBS_scripts = [directory + i for i in listdir(directory) if i[:3] == "PBS"]
-  
-  
