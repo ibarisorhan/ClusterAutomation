@@ -1,6 +1,6 @@
 #The Settings Here Should Be Checked Before Simulations Are Run!
 
-ABSOLUTE_PATH_TO_RASPA_DIR = ''
+ABSOLUTE_PATH_TO_RASPA_DIR = '$HOME'
 PROJECT_NAME = '' 
 Sim = 'MonteCarlo'
 
