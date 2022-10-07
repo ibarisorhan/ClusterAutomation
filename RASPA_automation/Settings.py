@@ -1,6 +1,7 @@
 #The Settings Here Should Be Checked Before Simulations Are Run!
 
 ABSOLUTE_PATH_TO_RASPA_DIR = ''
+PROJECT_NAME = '' 
 Sim = 'NVT'
 
 
