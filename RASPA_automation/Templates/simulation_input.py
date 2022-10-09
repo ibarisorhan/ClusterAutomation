@@ -17,7 +17,6 @@ FrameworkName                 {MOF}
 UnitCells                     {countABC}
 ExternalTemperature           {ExternalTemperature}
 ExternalPressure              {ExternalPressure}
-AddAtomNumberCodeToLabel      yes
 UseChargesFromCIFFile         yes
 
 Component 0 MoleculeName             CO2
