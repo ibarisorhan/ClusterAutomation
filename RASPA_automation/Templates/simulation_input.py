@@ -2,27 +2,27 @@
 data  = {"file_name" : "simulation_{job_number}.input"}
 
 simulation = {
+"MonteCarlo" : """
 
-"MonteCarlo":"""
-SimulationType        MonteCarlo
-NumberOfCycles        50000
-PrintEvery            1000
-RestartFile           no
-
-CutOff                12.5
+SimulationType                MonteCarlo
+NumberOfCycles                10000
+NumberOfInitializationCycles  2500
+PrintEvery                    5000
+RestartFile                   no
 
 Forcefield                    {ForcefieldName}
-Framework                     0
-FrameworkName                 {MOF}
-UnitCells                     {countABC}
-ExternalTemperature           {ExternalTemperature}
-ExternalPressure              {ExternalPressure}
 UseChargesFromCIFFile         yes
+
+Framework 0
+FrameworkName {MOF}
+UnitCells {countABC}
+ExternalTemperature {ExternalTemperature}
+ExternalPressure {ExternalPressure}
 
 Component 0 MoleculeName             CO2
             MoleculeDefinition       CO2
+            FugacityCoefficient      1.0
             TranslationProbability   0.5
-            RegrowProbability        0.5
             RotationProbability      0.5
             ReinsertionProbability   0.5
             SwapProbability          1.0
@@ -30,60 +30,8 @@ Component 0 MoleculeName             CO2
 
 
 """,
-
-
-
-"MakeGrid":"""
-SimulationType        MakeGrid
-NumberOfCycles        50000
-PrintEvery            1000
-RestartFile           no
-
-CutOff                12.5
-
-Forcefield                    {ForcefieldName}
-Framework                     0
-FrameworkName                 {MOF}
-UnitCells                     {countABC}
-ExternalTemperature           {ExternalTemperature}
-ExternalPressure              {ExternalPressure}
-AddAtomNumberCodeToLabel      yes
-
-NumberOfGrids                 2
-GridTypes                     C_co2 O_co2
-SpacingVDWGrid                0.1
-SpacingCoulombGrid            0.1
-UseChargesFromCIFFile         yes
-
-""",
-
-"NVT":"""
-SimulationType MonteCarlo
-NumberOfCycles 25000
-NumberOfInitializationCycles 5000
-NumberOfEquilibrationCycles 10000
-PrintEvery 5000
-RestartFile no
-Forcefield {ForcefieldName}
-ExternalTemperature {ExternalTemperature}
-ExternalPressure 0
-
-
-Framework 0
-FrameworkName {MOF}
-RemoveAtomNumberCodeFromLabel no
-UnitCells {countABC}
-
-
-Component 0 MoleculeName CO2
-MoleculeDefinition CO2
-RotationProbability 0.5
-TranslationProbability 0.5
-ReinsertionProbability 0.5
-CreateNumberOfMolecules 1
-
-""",
-
+            
+            
 "Henry298K": """
 SimulationType                MonteCarlo
 NumberOfCycles                20000
