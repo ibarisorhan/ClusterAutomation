@@ -19,7 +19,7 @@ PBS_Settings = {
 }
 
 Structures = {
-	'Directory' : '${RASPA_Directory}/RASPA/simulations/share/raspa/structures/cif/',
+	'Directory' : f'{ABSOLUTE_PATH_TO_RASPA_DIR}/RASPA/simulations/share/raspa/structures/cif/',
 	'NumberOfJobs' : 500, #number of jobs to run simultaneously
 	'ListOfStructures': './Queue/Structures.txt', #document of structures to be simulated
 	'currentSuffix': '_current.txt',
