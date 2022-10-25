@@ -3,7 +3,7 @@ shifted
 # general rule tailcorrections
 no
 # number of defined interactions
-115
+118
 # type interaction, parameters.    IMPORTANT: define shortest matches first, so that more specific ones overwrites these
  Ac_             lennard-jones   16.606  3.0985  //UFF
  Ag_             lennard-jones   18.115  2.8045  // UFF
@@ -120,5 +120,8 @@ no
  He              lennard-jones   10.9    2.64    // J.O. Hirschfelder et al., Molecular Theory of Gases and Liquids, Wiley, New York, 1954, p. 1114.
  N_com           none                            //
  N_n2            lennard-jones   38.298  3.306   // A. Martin-Calvo et al. , Phys. Chem. Chem. Phys. 2011, 13, 11165-11174.
+ Mw              none  //TIP4P
+ Ow              lennard-jones   0.31589 0.77490 // http://catalan.quim.ucm.es/gromacs/topol.top (accessed via wikipedia for TIP4P)
+ Hw              lennard-jones   0       0 
 # general mixing rule for Lennard-Jones
 Lorentz-Berthelot
