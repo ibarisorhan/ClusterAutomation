@@ -30,7 +30,7 @@ try:
     Press = document.split("/")[-1].split("_")[-1][:-5]#.strip(".data")
     MOF   = document.split("/")[-1].split(Units)[0][7:]#.strip("output_")
     errors = ""
-    print("Made to Warning Check")
+    #print("Made to Warning Check")
     hasError = "No"
     if len(data.split("WARNING"))>1:
         hasError = "Yes"
@@ -40,10 +40,11 @@ try:
             errors += i.split('\n')[0]
 
     f = open(output_doc, "a+")
-    f.write(f"{document},{MOF},{Units},{Temp},{Press},{uptake_abs},{uptake_error},{hasError}\n")
+    f.write(f"{document},{MOF},{Units},{Temp},{Press},{uptake_abs},{uptake_error},{hasError},YES\n")
     f.close()
-    
-    
-except: 
+
+
+except:
     print(f"ERROR: Unable to read data from document document: {document}")
+
 
